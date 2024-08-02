@@ -109,13 +109,13 @@ questions = [
     {
         "question": "Would you rather be involved in business startups or work on non-profit initiatives?",
         "options": ["Business startups", "Non-profit initiatives", "Neither"],
-        "answer": "Miroslav Klose"
+        "answer": "Business startups"
     },
 
 ]
 
 def football_quiz():
-    st.title("Football Quiz!")
+    st.title("College Major Finder Quiz")
     
     with st.form("quiz_form"):
         user_answers = {}
@@ -125,20 +125,52 @@ def football_quiz():
 
         submit_button = st.form_submit_button(label="Submit Answers")
 
-    if submit_button:
-        score = 0
-        for i, q in enumerate(questions):
-            if user_answers[i] == q["answer"]:
-                score += 1
+    class PointSystem:
+    def __init__(self):
+        self.points = 0
 
-        st.write(f"Your score: {score}/{len(questions)}")
-        if score == len(questions):
-            st.success("Congratulations! Your football knowledge is amazing!")
-        elif score >= (len(questions) / 2):
-            st.info("Not terrible, but you can do better!")
+    def earn_points(self, amount):
+        if amount > 0:
+            self.points += amount
+            print(f"Earned {amount} points. Total points: {self.points}")
         else:
-            st.info("Not great, you still have a lot to learn about football...")
+            print("Amount should be positive.")
 
+    def spend_points(self, amount):
+        if amount > 0:
+            if self.points >= amount:
+                self.points -= amount
+                print(f"Spent {amount} points. Total points: {self.points}")
+            else:
+                print("Not enough points.")
+        else:
+            print("Amount should be positive.")
+
+    def check_points(self):
+        print(f"Total points: {self.points}")
+
+    def final_score(self):
+        if self.points >= 100:
+            recommendation = "Excellent! Keep up the great work!"
+        elif self.points >= 50:
+            recommendation = "Good job! You're doing well!"
+        elif self.points >= 20:
+            recommendation = "Not bad, but there's room for improvement."
+        else:
+            recommendation = "You need to work harder."
+
+        return self.points, recommendation
+
+# Example usage
+if __name__ == "__main__":
+    ps = PointSystem()
+    ps.earn_points(40)
+    ps.spend_points(10)
+    ps.check_points()
+    
+    score, recommendation = ps.final_score()
+    print(f"Final score: {score}")
+    print(f"Recommendation: {recommendation}")
 if __name__ == "__main__":
     football_quiz()
     
