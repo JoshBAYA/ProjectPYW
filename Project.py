@@ -3,204 +3,114 @@ import streamlit as st
 
 questions = [
     {
-        "question": "Who won the FIFA World Cup in 2018?",
-        "options": ["France", "Brazil", "Germany", "Spain"],
-        "answer": "France"
+        "question": "Would you rather work with numbers or words?",
+        "options": ["Numbers", "Words", "Germany"],
+        "answer": "Numbers"
     },
     {
-        "question": "Which player has won the most Ballon d'Or awards?",
-        "options": ["Cristiano Ronaldo", "Lionel Messi", "Michel Platini", "Johan Cruyff"],
-        "answer": "Lionel Messi"
+        "question": "Would you rather work in a Lab or an Office?",
+        "options": ["Lab", "Office", "Neither"],
+        "answer": "Office"
     },
     {
-        "question": "Which club has won the most Ligue 1 titles?",
-        "options": ["Paris Saint Germain", "Olympique Lyonnais", "AS Saint-Etienne", "AS Monaco"],
-        "answer": "Paris Saint Germain"
+        "question": "Would you rather create an art masterpiece or write a novel?",
+        "options": ["Create an art masterpiece", "Write a novel", "Neither"],
+        "answer": "Create an art masterpiece"
     },
     {
-       "question": "Which club has won the most UEFA Champions League titles?",
-       "options": ["Real Madrid", "FC Barcelona", "AC Milan", "Bayern Munich"],
-       "answer": "Real Madrid"
+       "question": "Would you rather solve a complex math problem or conduct a scientific experiment?",
+       "options": ["Solve a complex math problem", "Conduct a scientific experiment", "Neither"],
+       "answer": "Conduct a scientific experiment"
    },
    {
-       "question": "Who holds the record for the most goals scored in a single Premier League season?",
-       "options": ["Thierry Henry", "Mohamed Salah", "Alan Shearer", "Cristiano Ronaldo"],
-       "answer": "Mohamed Salah"
+       "question": "Would you rather study ancient civilizations or learn about modern politics?",
+       "options": ["Ancient civilizations", "Modern politics", "Neither"],
+       "answer": "Modern politics"
    },
    {
-       "question": "Which player has the most appearances in the history of the English Premier League?",
-       "options": ["Ryan Giggs", "Frank Lampard", "Gareth Barry", "Steven Gerrard"],
-       "answer": "Gareth Barry"
+       "question": "Would you rather design a building or create a software program?",
+       "options": ["Design a building", "Create a software program", "Neither"],
+       "answer": "Create a software program"
    },
    {
-       "question": "Who is the youngest goalscorer in FIFA World Cup history?",
-       "options": ["Pelé", "Kylian Mbappé", "Michael Owen", "Diego Maradona"],
-       "answer": "Pelé"
+       "question": "Would you rather work with animals or teach children?",
+       "options": ["Work with animals", "Teach children", "Neither"],
+       "answer": "Teach children"
    },
    {
-       "question": "Which national team has won the most Copa America titles?",
-       "options": ["Brazil", "Argentina", "Uruguay", "Chile"],
-       "answer": "Uruguay"
+       "question": "Would you rather have early Mornings or late Nights?",
+       "options": ["Late nights", "Early morning", "Neither"],
+       "answer": "Early morning"
    },
    {
-       "question": "Who is the all-time top scorer of the UEFA Champions League?",
-       "options": ["Michel Platini", "Cristiano Ronaldo", "Alan Shearer", "Thierry Henry"],
-       "answer": "Cristiano Ronaldo"
+       "question": "Would you rather explore space or dive into the ocean's depths?",
+       "options": ["Explore space", "Dive into the ocean's depths", "Neither"],
+       "answer": "Neither"
    },
    {
-       "question": "Which country hosted the first-ever FIFA World Cup in 1930?",
-       "options": ["Brazil", "Italy", "Uruguay", "France"],
-       "answer": "Uruguay"
+       "question": "Would you rather study human behavior or understand how machines work?",
+       "options": ["Study human behavior", "Understand how machines work", "Neither"],
+       "answer": "Understand how machines work"
    }, 
    {
-       "question": "Who has the most Ballon d'Or nominations in history?",
-       "options": ["Lionel Messi", "Cristiano Ronaldo", "Michel Platini", "Johan Cruyff"],
-       "answer": "Lionel Messi"
+       "question": "Would you rather compose a piece of music or act in a play?",
+       "options": ["Compose a piece of music", "Act in a play", "Neither"],
+       "answer": "Compose a piece of music"
    },
     {
-        "question": "Who was the first Ballon d'Or winner in 1956?",
-        "options": ["Stanley Matthews", "Alfredo Di Stefano", "Raymond Kopa", "Omar Sivori"],
-        "answer": "Stanley Matthews"
+        "question": "Would you rather manage a sports team or plan a corporate event?",
+        "options": ["Manage a sports team", "Plan a corporate event", "Neither"],
+        "answer": "Neither"
     },
     {
-        "question": "Which player won the Ballon d'Or in 1994, becoming the first African recipient?",
-        "options": ["George Weah", "Hristo Stoichkov", "Roberto Baggio", "Romário"],
-        "answer": "George Weah"
+        "question": "Would you rather translate foreign languages or study the effects of globalization?",
+        "options": ["Translate foreign languages", "Study the effects of globalization", "Neither"],
+        "answer": "Study the effects of globalization"
     },
     {
-        "question": "Who won the Ballon d'Or in 2018, breaking the Messi-Ronaldo dominance for that year?",
-        "options": ["Mbappé", "Luka Modrić", "Antoine Griezmann", "Raphael Varane"],
-        "answer": "Luka Modrić"
+        "question": "Would you rather lead a team project or work independently on a research paper?",
+        "options": ["Lead a team project", "Work independently on a research paper", "Neither"],
+        "answer": "Work independently on a research paper"
     },
     {
-        "question": "Who is the only goalkeeper to have won the Ballon d'Or?",
-        "options": ["Lev Yashin", "Dino Zoff", "Oliver Kahn", "Gianluigi Buffon"],
-        "answer": "Lev Yashin"
+        "question": "Would you rather develop a new recipe or create a health fitness plan?",
+        "options": ["Develop a new recipe", "Create a health fitness plan", "Neither"],
+        "answer": "Develop a new recipe"
     },
     {
-        "question": "Which year did Cristiano Ronaldo win his first Ballon d'Or?",
-        "options": ["2008", "2009", "2010", "2011"],
-        "answer": "2008"
+        "question": "Would you rather study law or explore philosophical ideas?",
+        "options": ["Study law", "Explore philosophical ideas", "Neither"],
+        "answer": "Explore philosophical ideas"
     },
     {
-        "question": "Who would have surely won the Ballon d'Or in 2020, if not for Covid-19?",
-        "options": ["Lionel Messi", "Cristiano Ronaldo", "Robert Lewandowski", "Luka Modric"],
-        "answer": "Robert Lewandowski"
+        "question": "Would you rather work on environmental conservation or urban development?",
+        "options": ["Environmental conservation", "Urban development", "Neither"],
+        "answer": "Urban development"
     },
     {
-        "question": "Which country has produced the most Ballon d'Or winners as of 2022?",
-        "options": ["Brazil", "Argentina", "Germany", "France"],
-        "answer": "Argentina"
+        "question": "Would you rather write code or study Cybersecurity?",
+        "options": ["Write Code", "Study Cybersecurity", "Neither"],
+        "answer": "Write Code"
     },
     {
-        "question": "Who was the youngest ever Ballon d'Or winner at the age of 20 in 1957?",
-        "options": ["Omar Sivori", "Eusébio", "Raymond Kopa", "Ronaldo Nazário"],
-        "answer": "Ronaldo Nazário"
+        "question": "Would you rather analyze crime scenes or study social justice issues?",
+        "options": ["Analyze crime scenes", "Study social justice issues", "Neither"],
+        "answer": "Neither"
     },
-    {   "question": "In which stadium is the 2024 Champions League Final being played?",
-        "options": ["Parc des Princes", "Santiago Bernabeu", "Wembley", "San Siro"],
-        "answer": "Wembley"
-    },
-    {
-        "question": "Which country has won the most FIFA World Cups?",
-        "options": ["Germany", "Brazil", "Italy", "Argentina"],
-        "answer": "Brazil"
+    {   "question": "Would you rather focus on physical health or mental health?",
+        "options": ["Physical health", "Mental health", "Neither"],
+        "answer": "Mental health"
     },
     {
-        "question": "Who is the all-time top scorer in the FIFA World Cup?",
-        "options": ["Lionel Messi", "Miroslav Klose", "Pelé", "Just Fontaine"],
+        "question": "Would you rather work in a lab or in the field with a community?",
+        "options": ["Work in a lab", "In the field with a community", "Neither"],
+        "answer": "In the field with a community"
+    },
+    {
+        "question": "Would you rather be involved in business startups or work on non-profit initiatives?",
+        "options": ["Business startups", "Non-profit initiatives", "Neither"],
         "answer": "Miroslav Klose"
     },
-    {
-        "question": "Which club won the first UEFA Champions League in its current format (1992-93)?",
-        "options": ["AC Milan", "FC Barcelona", "Marseille", "Ajax"],
-        "answer": "Marseille"
-    },
-    {
-        "question": "Who scored the fastest goal in Premier League history?",
-        "options": ["Sadio Mané", "Alan Shearer", "Ledley King", "Shane Long"],
-        "answer": "Shane Long"
-    },
-    {
-        "question": "Which national team has won the most African Cup of Nations titles?",
-        "options": ["Ivory Coast", "Nigeria", "Cameroon", "Egypt"],
-        "answer": "Egypt"
-    },
-    {
-        "question": "Which player holds the record for the most goals in a calendar year?",
-        "options": ["Lionel Messi", "Cristiano Ronaldo", "Gerd Müller", "Pelé"],
-        "answer": "Lionel Messi"
-    },
-    {
-        "question": "Which club has the most UEFA Europa League titles?",
-        "options": ["Sevilla", "Liverpool", "Inter Milan", "Juventus"],
-        "answer": "Sevilla"
-    },
-    {
-        "question": "Who won the Golden Boot at the 2014 FIFA World Cup?",
-        "options": ["Miroslav Klose", "Thomas Müller", "Lionel Messi", "James Rodríguez"],
-        "answer": "James Rodríguez"
-    },
-    {
-        "question": "Who is the only player to have won the Champions League with three different clubs?",
-        "options": ["Clarence Seedorf", "Cristiano Ronaldo", "Samuel Eto'o", "Zlatan Ibrahimović"],
-        "answer": "Clarence Seedorf"
-    },
-    {
-        "question": "Which country won the first European Championship in 1960?",
-        "options": ["Spain", "Soviet Union", "Italy", "France"],
-        "answer": "Soviet Union"
-    },
-    {
-        "question": "Which player has the most assists in Premier League history?",
-        "options": ["Ryan Giggs", "Cesc Fàbregas", "Frank Lampard", "Wayne Rooney"],
-        "answer": "Ryan Giggs"
-    },
-    {
-        "question": "Who was the first non-European player to win the Ballon d'Or?",
-        "options": ["Romário", "Pelé", "Diego Maradona", "George Weah"],
-        "answer": "George Weah"
-    },
-    {
-        "question": "Which team won the first Premier League title in 1992-93?",
-        "options": ["Blackburn Rovers", "Manchester United", "Arsenal", "Chelsea"],
-        "answer": "Manchester United"
-    },
-    {
-        "question": "Who scored the 'Hand of God' goal in the 1986 FIFA World Cup?",
-        "options": ["Jorge Valdano", "Gary Lineker", "Diego Maradona", "Michel Platini"],
-        "answer": "Diego Maradona"
-    },
-    {
-        "question": "Which club is known as 'The Old Lady'?",
-        "options": ["Real Madrid", "Juventus", "Manchester United", "Bayern Munich"],
-        "answer": "Juventus"
-    },
-    {
-        "question": "Which player has won the most Champions League titles?",
-        "options": ["Cristiano Ronaldo", "Paolo Maldini", "Alfredo Di Stéfano", "Francisco Gento"],
-        "answer": "Francisco Gento"
-    },
-    {
-        "question": "Which player scored the 'Golden Goal' to win Euro 2000?",
-        "options": ["David Trezeguet", "Thierry Henry", "Francesco Totti", "Alessandro Del Piero"],
-        "answer": "David Trezeguet"
-    },
-    {
-        "question": "How many goals did Lionel Messi score in 2012",
-        "options": ["81", "91", "92", "88"],
-        "answer": "91"
-    },
-    {
-        "question": "Which club has won the most Bundesliga titles?",
-        "options": ["Hamburg SV", "Borussia Dortmund", "Bayern Munich", "Werder Bremen"],
-        "answer": "Bayern Munich"
-    },
-    {
-        "question": "Which player scored the most goals in a single World Cup tournament?",
-        "options": ["Gerd Müller", "Ronaldo", "Pelé", "Just Fontaine"],
-        "answer": "Just Fontaine"
-    }
 
 ]
 
