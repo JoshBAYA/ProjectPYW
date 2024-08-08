@@ -11,20 +11,7 @@ class PointSystem:
             if self.points >= amount:
                 self.points -= amount
 
-    def check_points(self):
-        print(f"Total points: {self.points}")
-
-    def final_score(self):
-        if self.points >= 100:
-            recommendation = "Excellent! Keep up the great work!"
-        elif self.points >= 50:
-            recommendation = "Good job! You're doing well!"
-        elif self.points >= 20:
-            recommendation = "Not bad, but there's room for improvement."
-        else:
-            recommendation = "You need to work harder."
-
-        return self.points, recommendation
+    
 
 def ask_question(question, choice1, choice2):
     print(question)
