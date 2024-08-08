@@ -7,11 +7,22 @@ class PointSystem:
             self.points += amount
 
     def spend_points(self, amount):
-        if amount > 0:
-            if self.points >= amount:
-                self.points -= amount
+        if amount > 0 and self.points >= amount:
+            self.points -= amount
 
-    
+    def final_score(self):
+        score = self.points
+        # Add recommendation logic based on the final score
+        if score >= 90:
+            recommendation = "Analytical Thinker: Consider majors like Mathematics, Engineering, or Data Science."
+        elif score >= 60:
+            recommendation = "Creative Mind: Consider majors like Arts, Literature, or Music."
+        elif score >= 30:
+            recommendation = "Science and Exploration Enthusiast: Consider majors like Biology, Environmental Science, or Astronomy."
+        else:
+            recommendation = "Social and Humanitarian Leader: Consider majors like Psychology, Sociology, or Public Health."
+
+        return score, recommendation
 
 def ask_question(question, choice1, choice2):
     print(question)
