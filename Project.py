@@ -24,11 +24,11 @@ class PointSystem:
 
         return score, recommendation
 
-def ask_question(question, choice1, choice2):
+def ask_question(question, choice1, choice2, neither):
     print(question)
     print(f"1. {choice1}")
     print(f"2. {choice2}")
-    print(f"3. {Neither}")
+    print(f"3. {neither}")
     while True:
         try:
             answer = int(input("Enter 1, 2, or 3: "))
@@ -66,13 +66,13 @@ def main():
         ("Would you rather be involved in business startups or work on non-profit initiatives?", "Business Startups", "Non-profit Initiatives", "Neither")
     ]
 
-    for question, choice1, choice2 in questions:
-        answer = ask_question(question, choice1, choice2)
+    for question, choice1, choice2, neither in questions:
+        answer = ask_question(question, choice1, choice2, neither)
         if answer == 1:
             ps.earn_points(5)
         elif answer == 2:
             ps.earn_points(3)
-        elif: answer == 2:
+        elif answer == 3:  # Corrected this line to handle the "Neither" case
             ps.earn_points(1)
 
     score, recommendation = ps.final_score()
