@@ -28,7 +28,7 @@ def ask_question(question, choice1, choice2):
     print(question)
     print(f"1. {choice1}")
     print(f"2. {choice2}")
-    print("3. Neither")
+    print(f"3. {Neither}")
     while True:
         try:
             answer = int(input("Enter 1, 2, or 3: "))
@@ -62,7 +62,7 @@ def main():
         ("Would you rather write code or study cybersecurity?", "Write Code", "Cybersecurity", "Neither"),
         ("Would you rather analyze crime scenes or study social justice issues?", "Analyze Crime Scenes", "Social Justice Issues", "Neither"),
         ("Would you rather focus on physical health or mental health?", "Physical Health", "Mental Health", "Neither"),
-        ("Would you rather work in a lab or in the field with a community?", "Lab", "Field", "Neither"),
+        ("Would you rather work in a lab or the field with a community?", "Lab", "Field", "Neither"),
         ("Would you rather be involved in business startups or work on non-profit initiatives?", "Business Startups", "Non-profit Initiatives", "Neither")
     ]
 
@@ -72,7 +72,7 @@ def main():
             ps.earn_points(5)
         elif answer == 2:
             ps.earn_points(3)
-        else:
+        elif: answer == 2:
             ps.earn_points(1)
 
     score, recommendation = ps.final_score()
